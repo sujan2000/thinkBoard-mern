@@ -5,8 +5,8 @@ import NoteDetailPage from './pages/NoteDetailPage.jsx'
 
 const App = () => {
   return (
-    <div>
-     <Routes>
+    <div data-theme="forest, synthwave, cyberpunk">
+      <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/create" element={<CreatePage />} />
         <Route path="/note/:id" element={<NoteDetailPage />} />
