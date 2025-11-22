@@ -14,11 +14,8 @@ export async function getAllNotes(req, res) {
 
 export async function getNoteById(req, res) {
     try {
-        const { title, content } = req.body;
-        const note = await Note.findById(
-            req.params.id,
-            { title, content }
-        )
+        // Do not rely on req.body for GET by id; just fetch by id
+        const note = await Note.findById(req.params.id);
 
         if (!note) return res.status(404).json({ message: "Note not found" })
         res.status(200).json(note);
@@ -69,11 +66,8 @@ export async function updateNote(req, res) {
 
 export async function deleteNote(req, res) {
     try {
-        const { title, content } = req.body;
-        const deleteNote = await Note.findByIdAndDelete(
-            req.params.id,
-            { title, content }
-        )
+        // Delete by id only; body is not used for DELETE-by-id
+        const deleteNote = await Note.findByIdAndDelete(req.params.id);
 
         if (!deleteNote) return res.status(404).json({ message: "Note not found put valid ID" });
 
