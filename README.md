@@ -50,7 +50,7 @@ Note: The repository root `package.json` includes helper scripts:
 
 1. Build frontend:
    npm run build
-   (or from root: npm run build — installs deps and runs frontend build)
+  
 2. Ensure backend environment variables (especially `MONGO_URI` and Upstash/Redis creds) are set and `NODE_ENV=production`.
 3. Start backend:
    npm run start --prefix backend
@@ -189,4 +189,3 @@ Create `backend/.env` (or set environment variables in your host):
 - License: ISC (see root `package.json`)
 - Repo: https://github.com/sujan2000/thinkBoard-mern
 
-If you want, I can create and open a PR that adds this README.md to the repository.
