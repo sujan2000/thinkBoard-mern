@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/sujan2000/thinkBoard-mern/issues"
   },
-  "homepage": "https://github.com/sujan2000/thinkBoard-mern#readme"
+  "homepage": "https://github.com/sujan2000/thinkBoard-mern#readme",
+  "dependencies": {
+    "backend": "^0.0.0"
+  }
 }
